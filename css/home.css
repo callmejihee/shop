@@ -1,0 +1,214 @@
+:root {
+  --color-white: #fdfbf8;
+  --color-black: #000;
+  --color-green: #00412d;
+  --font-merri: 'Merriweather', serif;
+  --font-noto: 'Noto Sans KR', sans-serif;
+}
+* {
+  text-decoration: none;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: ease 0.5s;
+}
+body {
+  background: var(--color-white);
+}
+
+/* 헤더 영역 */
+.header__wrap * {
+  color: var(--color-white);
+}
+.header__wrap.font_bk * {
+  color: var(--color-black);
+}
+.nav__mobile__menu {
+  display: none;
+}
+.header__wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  width: 100%;
+  z-index: 99;
+}
+.header__notice {
+  border-bottom: 1px solid var(--color-white);
+  width: 100%;
+  text-align: center;
+  height: 30px;
+  line-height: 26px;
+}
+.header__notice a {
+  font-size: 0.7rem;
+  font-family: var(--font-noto);
+}
+.header__wrap:hover {
+  background: var(--color-white);
+}
+.header__wrap:hover .header__notice {
+  border-bottom: 1px solid #000000;
+}
+.header__wrap:hover a {
+  color: rgb(0, 0, 0);
+}
+.nav__wrap {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+.nav__wrap.fixed {
+  position: fixed;
+}
+.nav__wrap.fixed:hover {
+  background: var(--color-white);
+}
+.nav__wrap > div {
+  padding: 0 20px;
+}
+.nav {
+  width: 85%;
+}
+.nav > ul {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  height: 100%;
+  align-items: center;
+}
+.nav__list {
+  padding: 20px 0;
+}
+.nav__list a {
+  font-size: 1.5rem;
+  font-family: var(--font-merri);
+  border-bottom: 3px solid rgba(0, 0, 0, 0);
+}
+.nav__list a:hover {
+  font-style: italic;
+  border-bottom: 3px solid var(--color-black);
+}
+.nav__sub {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  width: 100%;
+  padding-bottom: 20px;
+}
+.nav__sub li {
+  padding: 2px 0;
+}
+.nav__sub a {
+  font-size: 2rem;
+  opacity: 0.4;
+}
+.nav__sub a:hover {
+  opacity: 1;
+}
+.nav__list__shop:hover .sub__shop {
+  display: flex;
+}
+.nav__list__shop:hover .sub__shop.height {
+  top: 71px;
+}
+.sub__shop {
+  padding-left: 20px;
+  background: var(--color-white);
+  display: none;
+}
+.sub__shop ul {
+  width: 30%;
+}
+.nav__list__info:hover .sub__info {
+  display: block;
+}
+.nav__list__info:hover .sub__info.height {
+  top: 71px;
+}
+.sub__info {
+  padding-right: 16%;
+  background: var(--color-white);
+  display: none;
+}
+.nav__items {
+  display: flex;
+  width: 15%;
+  justify-content: space-around;
+  align-items: center;
+}
+.nav__items li {
+  padding: 0 20px;
+}
+.nav__items a {
+  font-size: 0.8rem;
+}
+.sub__info ul li {
+  display: flex;
+  justify-content: flex-end;
+}
+
+/* 로고 */
+.logo {
+  position: fixed;
+  bottom: 25px;
+  filter: invert(100%) sepia(37%) saturate(736%) hue-rotate(30deg)
+    brightness(113%) contrast(105%);
+  transition: none;
+}
+.logo_img {
+  width: 150px;
+  filter: invert(100%) sepia(37%) saturate(736%) hue-rotate(30deg)
+    brightness(113%) contrast(105%);
+  transition: none;
+}
+.logo.logo_bk {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(105%)
+    contrast(104%);
+  transition: none;
+  transition: none;
+}
+.logo_img.logo_bk {
+  filter: invert(0%) sepia(100%) saturate(0%) hue-rotate(70deg) brightness(105%)
+    contrast(104%);
+  transition: none;
+  transition: none;
+}
+
+/* 메인 영역*/
+.main__contents {
+  display: flex;
+  height: calc(100vh);
+  z-index: 2;
+  position: relative;
+}
+.main__img {
+  width: 100%;
+}
+.main__newarrivals {
+  background: url(../img/main01.jpg) center no-repeat;
+  background-size: cover;
+}
+.main__accessories {
+  background: url(../img/main02.jpg) center no-repeat;
+  background-size: cover;
+}
+.main__text {
+  opacity: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  font-size: 32px;
+  background: rgba(0, 0, 0, 0);
+}
+.main__text:hover {
+  cursor: pointer;
+  color: var(--color-black);
+  font-size: 32px;
+  background: rgba(255, 255, 255, 0.8);
+  opacity: 1;
+}

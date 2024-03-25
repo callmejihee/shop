@@ -1,0 +1,16 @@
+.footer__wrap {
+  background: var(--color-white);
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem 2rem;
+}
+.footer__wrap a {
+  color: var(--color-black);
+  font-family: var(--font-noto);
+  font-size: 0.9rem;
+}
+.footer__wrap ul {
+  display: flex;
+  gap: 20px;
+}
